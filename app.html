@@ -343,15 +343,20 @@
         #welcomeModal { transition: opacity 0.5s ease; }
         #welcomeModal.hidden { opacity: 0; pointer-events: none; }
 		.maplibregl-canvas { filter: none !important; }
-
+.maplibregl-ctrl-attrib, 
+.maplibregl-ctrl-logo,
+.maplibregl-ctrl-bottom-left, .maplibregl-ctrl-bottom-right {
+    display: none !important;
+}
 .system-footer {
     position: absolute;
     bottom: calc(4px + var(--safe-bottom));
     left: 0;
     width: 100%;
+    padding: 0 85px; /* Prevents text from hitting the HUD buttons on phones */
     text-align: center;
     pointer-events: none;
-    z-index: 10; 
+    z-index: 30;
     font-family: var(--font-mono);
     font-size: 9px;
     font-weight: 500;
@@ -359,7 +364,7 @@
     color: var(--text-tertiary);
     text-shadow: 0 1px 2px rgba(0,0,0,0.8);
     opacity: 0.6;
-	padding: 0 80px;
+	display: block !important;
 }
 
 .system-footer a {
@@ -477,13 +482,13 @@
                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
             </svg>
         </button>
-		<div class="system-footer">
-        <a href="https://airplanes.live/" target="_blank">Airplanes.live</a> | 
-        <a href="https://open-meteo.com/" target="_blank">Open-Meteo</a> | 
-        <a href="https://carto.com/" target="_blank">CARTO</a> | 
-        <a href="https://www.esri.com" target="_blank">Esri</a> | 
+    </div> <div class="system-footer">
+        APIs: 
+        <a href="https://airplanes.live/" target="_blank">Airplanes.live</a> • 
+        <a href="https://open-meteo.com/" target="_blank">Wx</a> • 
+        <a href="https://carto.com/" target="_blank">CARTO</a> • 
+        <a href="https://www.esri.com" target="_blank">Esri</a> • 
         <a href="https://www.openstreetmap.org/" target="_blank">OSM</a>
-    </div>
     </div>
 
     <div id="cockpit-view">
@@ -584,7 +589,6 @@
     </div>
     
     <div class="toast" id="toast"></div>
-</body>
 <script>
 const CONFIG = {
     API_PLANES: 'https://api.airplanes.live/v2/point/',
