@@ -367,17 +367,6 @@
 	display: block !important;
 }
 
-.system-footer a {
-    color: inherit;
-    text-decoration: none;
-    pointer-events: auto; 
-    transition: color 0.2s;
-}
-
-.system-footer a:hover {
-    color: var(--text-primary);
-    text-decoration: underline;
-}
 </style>
 </head>
 <body>
@@ -390,23 +379,16 @@
                 PlaneSpotted<sup style="font-size: 10px; vertical-align: top; margin-left: 2px;">&copy;</sup>
             </div>
             <div class="modal-desc" style="margin-bottom: 24px; font-size: 13px; line-height: 1.6;">
-                PlaneSpotted is a tiny, open source aircraft tracking engine for spotters and hobby coders.
-                <br><br>
-                Try it in your browser, clone the repo, swap out APIs, and drop it into your own side projects.
-                
-                <!-- FIX: Added Credits Section here -->
+                An open source airplane tracking engine for plane spotters and hobby coders.
                 <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--separator); font-size: 11px; opacity: 0.7;">
-                    <strong>Data Sources:</strong><br>
+                    <strong>Open Source | Live Data</strong><br>
                     Map tiles by <a href="https://carto.com" style="color: inherit;">CARTO</a> & <a href="https://openstreetmap.org" style="color: inherit;">OSM</a>.<br>
                     Live weather via <a href="https://open-meteo.com" style="color: inherit;">Open-Meteo</a>.<br>
                     ADS-B traffic via <a href="https://airplanes.live" style="color: inherit;">Airplanes.live</a>.<br>
                     Satellite imagery via <a href="https://www.esri.com" style="color: inherit;">Esri</a>.
                 </div>
             </div>
-            <button class="modal-btn primary" id="enableGpsBtn">Start Spotting</button>
-            <div style="margin-top: 16px; font-size: 11px; color: var(--text-tertiary);">
-                Open Source · Live Data
-            </div>
+            <button class="modal-btn primary" id="enableGpsBtn">Start Plane Spotting</button>
         </div>
     </div>
 
@@ -483,12 +465,7 @@
             </svg>
         </button>
     </div> <div class="system-footer">
-        APIs: 
-        <a href="https://airplanes.live/" target="_blank">Airplanes.live</a> • 
-        <a href="https://open-meteo.com/" target="_blank">Wx</a> • 
-        <a href="https://carto.com/" target="_blank">CARTO</a> • 
-        <a href="https://www.esri.com" target="_blank">Esri</a> • 
-        <a href="https://www.openstreetmap.org/" target="_blank">OSM</a>
+        Airplanes.live | Open-Meteo | Carto | Esri | OSM
     </div>
 
     <div id="cockpit-view">
